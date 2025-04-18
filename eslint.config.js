@@ -7,12 +7,14 @@ module.exports = [
       ecmaVersion: 2020,
       sourceType: 'commonjs',
       globals: {
+        // Globals para Node.js
         require: 'readonly',
         process: 'readonly',
         module: 'writable',
         console: 'readonly',
         __dirname: 'readonly',
         exports: 'writable',
+        // Globals para Jest
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
@@ -21,7 +23,11 @@ module.exports = [
         afterAll: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
-      },
+        // Outros globals para ES6
+        Promise: 'readonly',
+        Map: 'readonly',
+        Set: 'readonly'
+      }
     },
     linterOptions: {
       reportUnusedDisableDirectives: true,
@@ -31,11 +37,6 @@ module.exports = [
       'indent': ['error', 2],
       'quotes': ['error', 'single'],
       'semi': ['error', 'always']
-    },
-    env: {
-      node: true,
-      es6: true,
-      jest: true
     }
   }
 ]; 
