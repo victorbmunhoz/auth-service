@@ -23,7 +23,7 @@ jobs:
         run: npm ci
       
       - name: Run linter
-        run: npx eslint .
+        run: npx eslint@8.57.0 .
       
       - name: Run tests
         run: npm test
